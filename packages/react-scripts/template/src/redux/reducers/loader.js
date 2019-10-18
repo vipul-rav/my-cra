@@ -1,20 +1,12 @@
-import { actionTypes } from "../../constants";
-
-export const initialState = {
+const initialState = {
     loading: true,
-    showError: false,
 };
 
-export default function loaderReducer(state = initialState, action) {
-    switch (action.type) {
-        case actionTypes.FETCH_CONFIG_FAILED:
-        case actionTypes.FETCH_CONTENT_FAILED:
-        case actionTypes.FETCH_USERS_FAILED:
-            return { ...state, showError: true, loading: false };
-    }
+const loader = (state = initialState, action) => {
     if (action.meta && action.meta.loading !== undefined) {
         return { ...state, loading: action.meta.loading };
     }
-
     return state;
-}
+};
+
+export default loader;

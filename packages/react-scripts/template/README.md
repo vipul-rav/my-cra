@@ -1,31 +1,37 @@
 This project was bootstrapped with a fork of [Create React App](https://github.com/facebook/create-react-app).
 
 ## New Project via the CLI
+
 if you got this far you already have the generator running. For reference the command is:
+
 ```angular2
-    npx create-react-app <projectName> --use-npm --scripts-version trickycdm-react-scripts
+    npx create-react-app <projectName> --use-npm --scripts-version atom-react-scripts
 ```
 
-You can also add --typescript if you want the typescript version. 
+You can also add --typescript if you want the typescript version.
 
 ## Changelog
+
 ### v1.0.0
-+ added default dependencies
-+ added pre-push config
-+ added new folder structure
-+ added example of components and test structure
-+ added example of Ducks Redux format
-+ added react router and example
-+ added GlobalErrorBoundary component
-+ added setupTests.js to enable enzyme
-+ added semistandard formatter
-+ added .env files
-+ added .npmrc file to save-exact
+
+-   added default dependencies
+-   added pre-push config
+-   added new folder structure
+-   added example of components and test structure
+-   added example of Ducks Redux format
+-   added react router and example
+-   added GlobalErrorBoundary component
+-   added setupTests.js to enable enzyme
+-   added semistandard formatter
+-   added .env files
+-   added .npmrc file to save-exact
 
 ## Default packages
-+ apisauce/axios - Included to standardise any HTTP calls. Eventually there will be a standard API connector built from this, so any microservice calls written should be modular and exportable. 
+
+-   apisauce/axios - Included to standardise any HTTP calls. Eventually there will be a standard API connector built from this, so any microservice calls written should be modular and exportable.
 
 ## Available Scripts
+
 In the project directory, you can run:
 
 ### `npm start`

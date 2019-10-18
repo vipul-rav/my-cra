@@ -1,7 +1,7 @@
-import { isRSAA, RSAA } from "redux-api-middleware";
-import  configSelectors  from "../selectors";
+import { isRSAA, RSAA } from 'redux-api-middleware';
+import configSelectors from '../selectors';
 
-const apiUrlMiddleware = store => next => (action) => {
+const apiUrlMiddleware = store => next => action => {
     if (!isRSAA(action)) {
         return next(action);
     }
@@ -9,17 +9,21 @@ const apiUrlMiddleware = store => next => (action) => {
     const storeState = store.getState();
 
     const urlSelectors = {
-        "apiBaseUrl": configSelectors.apiBaseUrl,
+        apiUrl: configSelectors.apiUrl,
     };
 
     const endpoint = Object.keys(urlSelectors).reduce(
-        (curEndpoint, selectorKey) => curEndpoint.replace(selectorKey, urlSelectors[selectorKey](storeState)),
+        (curEndpoint, selectorKey) =>
+            curEndpoint.replace(
+                selectorKey,
+                urlSelectors[selectorKey](storeState)
+            ),
         action[RSAA].endpoint
     );
 
     const headers = {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
     };
 
     return next({

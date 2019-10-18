@@ -1,0 +1,13 @@
+
+...0 | Total Errors
+...1 | Total Warnings
+...1 | Total All
+
+=====Rules=====
+...1 no-multiple-empty-lines (WARNING)
+
+=====Disable=====
+no-multiple-empty-lines: off
+
+=====Downgrade=====
+no-multiple-empty-lines: warn

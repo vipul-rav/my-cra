@@ -1,6 +1,6 @@
 {
-  "name": "trickycdm-react-scripts",
-  "version": "0.0.15",
+  "name": "atom-react-scripts",
+  "version": "0.0.1",
   "description": "Configuration and scripts for Create React App, forked at version 2.1.8 of CRA",
   "repository": "facebook/create-react-app",
   "license": "MIT",

@@ -1,9 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from '../App';
+import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
+import App from './App';
+import { shallow } from 'enzyme';
 
-it.skip('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+const setup = overridesProps => {
+    const props = {
+        ...overridesProps,
+    };
+    const mockStore = configureMockStore();
+    const store = mockStore();
+    const wrapper = shallow(
+        <Provider store={store}>
+            <App {...props} />
+        </Provider>
+    );
+
+    return {
+        props,
+        wrapper,
+    };
+};
+
+describe('App render', () => {
+    it('should render', () => {
+        const { wrapper } = setup();
+        expect(wrapper.exists()).toBe(true);
+    });
 });

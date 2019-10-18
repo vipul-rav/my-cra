@@ -1,7 +1,6 @@
-import { actionTypes } from "../../constants";
+import { actionTypes } from '../../constants';
 
 const config = (state = {}, action) => {
-
     switch (action.type) {
         case actionTypes.FETCH_CONFIG_SUCCESS:
             return { ...state, envUrl: action.payload };
@@ -12,9 +11,6 @@ const config = (state = {}, action) => {
             };
         case actionTypes.FETCH_CONTENT_SUCCESS:
             return { ...state, externalContent: action.payload };
-        case actionTypes.FETCH_FETCH_USERS_SUCCESS:
-        case actionTypes.FETCH_FETCH_REPO_LIST_SUCCESS:
-            return state;
         default:
             return state;
     }

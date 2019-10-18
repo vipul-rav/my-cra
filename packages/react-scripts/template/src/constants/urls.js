@@ -1,4 +1,4 @@
-export const ENVconfig = "./config/env.json";
-export const CONTENT_URL = "./config/content.json";
-export const GET_USER_ORG_LIST = "apiBaseUrl/users/hadley/orgs";
-export const GET_USER_REPO ="apiBaseUrl/users/hadley/repos"
+export const ENVconfig = './env.json';
+export const CONTENT_URL = './content.json';
+export const GET_POST_LIST = 'apiUrl/posts';
+export const GET_POST_BY_ID = 'apiUrl/posts/';
