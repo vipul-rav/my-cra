@@ -36,5 +36,5 @@
     "lint-staged": "7.3.0",
     "prettier": "1.14.3",
     "redux-immutable-state-invariant": "2.1.0"
-  },
+  }
 }
