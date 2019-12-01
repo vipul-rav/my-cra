@@ -9,7 +9,8 @@ import withContent from '../../hocs/withContent';
 
 class Sample extends Component {
     componentDidMount() {
-        this.props.getPostList();
+        const { getPostList } = this.props;
+        getPostList();
     }
 
     continueClick = () => {
@@ -25,8 +26,7 @@ class Sample extends Component {
                 <h1>{content.homePageText}</h1>
                 <SampleComponent />
                 <button className="button" onClick={this.continueClick}>
-                    {' '}
-                    {content.btnContinue}{' '}
+                    {content.btnContinue}
                 </button>
             </div>
         );

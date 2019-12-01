@@ -20,14 +20,12 @@ export const fetchConfig = () => ({
             },
             {
                 type: actionTypes.FETCH_CONFIG_FAILED,
+                meta: {
+                    loading: false,
+                },
             },
         ],
     },
-});
-
-export const setQueryParams = params => ({
-    type: actionTypes.SET_QUERY_PARAMS,
-    params,
 });
 
 export const fetchContent = () => ({

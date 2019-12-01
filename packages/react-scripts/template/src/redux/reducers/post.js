@@ -6,7 +6,7 @@ const initialState = {
 
 const post = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.FETCH_POSTS_DETAILS:
+        case actionTypes.FETCH_POSTS_SUCCESS:
             return { ...state, postList: action.payload };
         case actionTypes.FETCH_POSTS_DETAILS_SUCCESS:
             return { ...state, postDetail: action.payload };

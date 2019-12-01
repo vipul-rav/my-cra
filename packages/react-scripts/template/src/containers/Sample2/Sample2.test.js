@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import App from './App';
+import Sample2 from './Sample2';
 import { shallow } from 'enzyme';
 
 const setup = overridesProps => {
@@ -12,7 +12,7 @@ const setup = overridesProps => {
     const store = mockStore();
     const wrapper = shallow(
         <Provider store={store}>
-            <App {...props} />
+            <Sample2 {...props} />
         </Provider>
     );
 
@@ -22,7 +22,7 @@ const setup = overridesProps => {
     };
 };
 
-describe('App ', () => {
+describe('Sample2', () => {
     it('should render', () => {
         const { wrapper } = setup();
         expect(wrapper.exists()).toBe(true);

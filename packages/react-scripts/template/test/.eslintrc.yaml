@@ -179,17 +179,8 @@ rules:
     - max: 1
   quotes:
     - warn
-    - double
+    - single
   rest-spread-spacing: warn
   semi:
     - warn
     - always
-
-# Douglas Crockford:
-# When I first met JavaScript, it was surprised that it had the two kinds of quotes, 
-# and I tried to make sense of it, using single for internal text, and double for external.
-# But eventually I realized that distinction isn't worth the clutter and confusion that comes
-# from having two when only one is needed. I decided to go with double because that is what JSON uses,
-# and it avoids errors caused by the overloading of apostrophe. I have been bitten by that.
-# In general, I am looking for ways to make the language smaller and better.
-# Quotes fall in the same class as null & undefined. We really don't need both.
